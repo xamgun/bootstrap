@@ -8,7 +8,7 @@ class SignupMailer < ActionMailer::Base
     mail({
       to: user.email,
       bcc: ['sign ups <signups@colcho.net>'],
-      subject: I18n.t('signup.confirm_email.subject')
+      subject: ['signup.confirm_email.subject']
     })
   end
 end
