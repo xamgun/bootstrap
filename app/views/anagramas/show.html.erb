@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word1:</strong>
+  <%= @anagrama.word1 %>
+</p>
+
+<p>
+  <strong>Word2:</strong>
+  <%= @anagrama.word2 %>
+</p>
+
+<p>
+  <strong>Check:</strong>
+  <%= @anagrama.check %>
+</p>
+
+<%= link_to 'Edit', edit_anagrama_path(@anagrama) %> |
+<%= link_to 'Back', anagramas_path %>

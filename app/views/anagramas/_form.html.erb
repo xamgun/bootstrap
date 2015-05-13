@@ -1,0 +1,30 @@
+<%= form_for(@anagrama) do |f| %>
+  <% if @anagrama.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@anagrama.errors.count, "error") %> prohibited this anagrama from being saved:        </h2>
+
+      <ul>
+      <% @anagrama.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :word1 %><br>
+    <%= f.text_field :word1 %>
+  </div>
+  <div class="field">
+    <%= f.label :word2 %><br>
+    <%= f.text_field :word2 %>
+  </div>
+   <div class="field">
+    <%= f.label :check %><br>
+    <%= f.check_box :check %>
+  </div> 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

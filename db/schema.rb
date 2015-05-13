@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150427175011) do
+=======
+ActiveRecord::Schema.define(version: 20150511124111) do
+
+  create_table "anagramas", force: true do |t|
+    t.string   "word1"
+    t.string   "word2"
+    t.boolean  "check"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+>>>>>>> dev
 
   create_table "groups", force: true do |t|
     t.string   "name"
