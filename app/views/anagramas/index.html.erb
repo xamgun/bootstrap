@@ -1,0 +1,29 @@
+<h1>Listing anagramas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Word1</th>
+      <th>Word2</th>
+      <th>Check</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @anagramas.each do |anagrama| %>
+      <tr>
+        <td><%= anagrama.word1 %></td>
+        <td><%= anagrama.word2 %></td>
+        <td><%= anagrama.check %></td>
+        <td><%= link_to 'Show', anagrama %></td>
+        <td><%= link_to 'Edit', edit_anagrama_path(anagrama) %></td>
+        <td><%= link_to 'Destroy', anagrama, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Anagrama', new_anagrama_path %>
